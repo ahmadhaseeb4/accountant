@@ -1,0 +1,23 @@
+.nav_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 1rem;
+  padding: 0 1rem;
+  height: 80px;
+  color: #eeeeee;
+  align-items: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.nav_item:hover {
+  background-color: #ff5722;
+  border-radius: 5px;
+}
+
+.nav_item_title {
+  margin-left: 15px;
+}
+
+
