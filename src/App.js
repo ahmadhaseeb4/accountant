@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import * as DataDogRUM from '@datadog/browser-rum'
 import Navbar from './components/Navbar/Navbar';
 import Index from './pages/Index/Index';
 
