@@ -7,7 +7,7 @@ function Index() {
     try {
       fetch(link).then((res) => {
         res.json().then((data) => {
-          console.log(data);
+          if (data.errorType === 'Error') throw new Error(`Exceptonn: ${data.errorMessage}`);
         });
       });
     } catch (err) {
