@@ -1,17 +1,18 @@
 import React from 'react';
-import { datadogRum } from '@datadog/browser-rum';
+// import { datadogRum } from '@datadog/browser-rum';
 
 function Index() {
-  const link = 'https://h77szjsxx44hjucva5f3qlp6oy0xdquv.lambda-url.us-east-1.on.aws/';
+  const link = 'https://ltwhtik5va.execute-api.us-east-1.amazonaws.com/accountant/accountant';
   const getData = async () => {
-    const response = await fetch(link, {
-      method: 'GET',
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-      },
-    });
-    datadogRum.addError(response);
-    console.error(response);
+    try {
+      fetch(link).then((res) => {
+        res.json().then((data) => {
+          console.log(data);
+        });
+      });
+    } catch (err) {
+      console.log('Error: ', err);
+    }
   };
   return (
     <button type="button" onClick={getData}>Get Data</button>
