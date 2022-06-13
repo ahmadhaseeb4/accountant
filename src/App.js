@@ -19,6 +19,7 @@ function App() {
       premiumSampleRate: 100,
       trackInteractions: true,
       defaultPrivacyLevel: 'mask-user-input',
+      allowedTracingOrigins: ['https://ltwhtik5va.execute-api.us-east-1.amazonaws.com/accountant/accountant'],
     });
     datadogRum.startSessionReplayRecording();
   };
